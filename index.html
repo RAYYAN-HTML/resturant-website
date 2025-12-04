@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodHub | Premium Dining Experience</title>
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./assets/css/foodhub.css" />
+    <link rel="stylesheet" href="./assets/css/media_query.css" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- meta description for SEO -->
+    <meta
+      name="description"
+      content="FoodHub offers premium dining with locally sourced ingredients, expert chefs, and exceptional service. Experience culinary excellence in a warm, inviting atmosphere."
+    />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/images/logo.svg" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <nav class="navbar">
+          <div class="navbar-wrapper">
+            <a href="#">
+              <img
+                src="./assets/images/logo.svg"
+                alt="FoodHub Logo"
+                width="130"
+              />
+            </a>
+
+            <ul class="navbar-nav">
+              <li><a href="#home" class="nav-link">Home</a></li>
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#services" class="nav-link">Services</a></li>
+              <li><a href="#menu" class="nav-link">Our Menu</a></li>
+              <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+            </ul>
+
+            <div class="navbar-btn-group">
+              <button class="shopping-cart-btn" aria-label="Shopping Cart">
+                <img
+                  src="./assets/images/cart.svg"
+                  alt="shopping cart icon"
+                  width="18"
+                />
+                <span class="count">5</span>
+              </button>
+
+              <button
+                class="menu-toggle-btn"
+                aria-label="Toggle Navigation Menu"
+              >
+                <span class="line one"></span>
+                <span class="line two"></span>
+                <span class="line three"></span>
+              </button>
+            </div>
+          </div>
+        </nav>
+
+        <div class="cart-box">
+          <ul class="cart-box-ul">
+            <h3 class="cart-h4">Your Current Order</h3>
+
+            <li>
+              <a href="#" class="cart-item">
+                <div class="img-box">
+                  <img
+                    src="./assets/images/menu1.jpg"
+                    alt="Saumon gravlax dish"
+                    class="product-img"
+                    width="50"
+                    height="50"
+                    loading="lazy"
+                  />
+                </div>
+                <h5 class="product-name">Saumon Gravlax</h5>
+                <p class="product-price"><span class="small">Rs</span>1,450</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="cart-item">
+                <div class="img-box">
+                  <img
+                    src="./assets/images/menu2.jpg"
+                    alt="Chevre fried with honey dish"
+                    class="product-img"
+                    width="50"
+                    height="50"
+                    loading="lazy"
+                  />
+                </div>
+                <h5 class="product-name">Chevre with Honey</h5>
+                <p class="product-price"><span class="small">Rs</span>1,980</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="cart-item">
+                <div class="img-box">
+                  <img
+                    src="./assets/images/menu3.jpg"
+                    alt="Crispy fish dish"
+                    class="product-img"
+                    width="50"
+                    height="50"
+                    loading="lazy"
+                  />
+                </div>
+                <h5 class="product-name">Crispy Fish</h5>
+                <p class="product-price"><span class="small">Rs</span>780</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="cart-item">
+                <div class="img-box">
+                  <img
+                    src="./assets/images/menu4.jpg"
+                    alt="Stracciatella dish"
+                    class="product-img"
+                    width="50"
+                    height="50"
+                    loading="lazy"
+                  />
+                </div>
+                <h5 class="product-name">Stracciatella</h5>
+                <p class="product-price"><span class="small">Rs</span>1,650</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="cart-item">
+                <div class="img-box">
+                  <img
+                    src="./assets/images/menu5.jpg"
+                    alt="Sea bream carpaccio dish"
+                    class="product-img"
+                    width="50"
+                    height="50"
+                    loading="lazy"
+                  />
+                </div>
+                <h5 class="product-name">Sea Bream Carpaccio</h5>
+                <p class="product-price"><span class="small">Rs</span>2,350</p>
+              </a>
+            </li>
+          </ul>
+
+          <div class="cart-total">
+            <p class="total-text">
+              Subtotal: <span class="total-price">Rs 8,210</span>
+            </p>
+          </div>
+
+          <div class="cart-btn-group">
+            <button class="btn btn-secondary">View Order Details</button>
+            <button class="btn btn-primary">Proceed to Checkout</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="home" id="home">
+          <div class="home-left">
+            <p class="home-subtext">Welcome to Culinary Excellence</p>
+
+            <h1 class="main-heading">
+              Where Every Dish Tells a Delicious Story
+            </h1>
+
+            <p class="home-text">
+              At FoodHub, we believe dining is more than just eating—it's an
+              experience that engages all your senses. Our master chefs combine
+              traditional techniques with modern innovation to create memorable
+              meals using only the finest local ingredients.
+            </p>
+
+            <div class="btn-group">
+              <a href="#menu">
+                <button class="btn btn-primary btn-icon">
+                  <img src="./assets/images/menu.svg" alt="menu icon" />
+                  Explore Our Menu
+                </button>
+              </a>
+              <a href="#about">
+                <button class="btn btn-secondary btn-icon">
+                  <img src="./assets/images/arrow.svg" alt="arrow icon" />
+                  Discover Our Story
+                </button>
+              </a>
+            </div>
+
+            <div class="home-features">
+              <div class="feature">
+                <span class="feature-icon">🍽️</span>
+                <span class="feature-text">Fresh Daily Ingredients</span>
+              </div>
+              <div class="feature">
+                <span class="feature-icon">⏰</span>
+                <span class="feature-text">Open 7 Days a Week</span>
+              </div>
+              <div class="feature">
+                <span class="feature-icon">🚚</span>
+                <span class="feature-text">Fast Delivery Available</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="home-right">
+            <img
+              src="./assets/images/food1.png"
+              alt="Gourmet pasta dish"
+              class="food-img food-1"
+              width="200"
+              loading="lazy"
+            />
+            <img
+              src="./assets/images/food2.png"
+              alt="Artisan pizza"
+              class="food-img food-2"
+              width="200"
+              loading="lazy"
+            />
+            <img
+              src="./assets/images/food3.png"
+              alt="Premium seafood dish"
+              class="food-img food-3"
+              width="200"
+              loading="lazy"
+            />
+
+            <img
+              src="./assets/images/dialog-1.svg"
+              alt="Customer review: 'Best restaurant in town!'"
+              class="dialog dialog-1"
+              width="230"
+            />
+            <img
+              src="./assets/images/dialog-2.svg"
+              alt="Special offer: 'Try our new seasonal menu'"
+              class="dialog dialog-2"
+              width="230"
+            />
+
+            <img
+              src="./assets/images/circle.svg"
+              alt="decorative circle"
+              class="shape shape-1"
+              width="25"
+            />
+            <img
+              src="./assets/images/circle.svg"
+              alt="decorative circle"
+              class="shape shape-2"
+              width="15"
+            />
+            <img
+              src="./assets/images/circle.svg"
+              alt="decorative circle"
+              class="shape shape-3"
+              width="30"
+            />
+            <img
+              src="./assets/images/ring.svg"
+              alt="decorative ring"
+              class="shape shape-4"
+              width="60"
+            />
+            <img
+              src="./assets/images/ring.svg"
+              alt="decorative ring"
+              class="shape shape-5"
+              width="40"
+            />
+          </div>
+        </section>
+
+        <section class="about" id="about">
+          <div class="about-left">
+            <div class="img-box">
+              <img
+                src="./assets/images/about-image.jpg"
+                alt="FoodHub restaurant interior and chef preparing dishes"
+                class="about-img"
+                width="250"
+              />
+            </div>
+
+            <div class="abs-content-box">
+              <div class="dotted-border">
+                <p class="number-lg">17</p>
+                <p class="text-md">
+                  Years of <br />
+                  Excellence
+                </p>
+              </div>
+            </div>
+
+            <img
+              src="./assets/images/circle.svg"
+              alt="decorative circle"
+              class="shape shape-6"
+              width="20"
+            />
+            <img
+              src="./assets/images/circle.svg"
+              alt="decorative circle"
+              class="shape shape-7"
+              width="30"
+            />
+            <img
+              src="./assets/images/ring.svg"
+              alt="decorative ring"
+              class="shape shape-8"
+              width="35"
+            />
+            <img
+              src="./assets/images/ring.svg"
+              alt="decorative ring"
+              class="shape shape-9"
+              width="80"
+            />
+          </div>
+
+          <div class="about-right">
+            <h2 class="section-title">Our Culinary Journey Since 2007</h2>
+
+            <p class="section-text">
+              Founded with a passion for exceptional food and warm hospitality,
+              FoodHub has grown from a small family restaurant into a beloved
+              dining destination. Our journey began with a simple philosophy:
+              serve delicious, authentic food made with love and care. Today, we
+              continue this tradition while embracing culinary innovation.
+            </p>
+
+            <p class="section-text">
+              What sets us apart is our commitment to quality at every level. We
+              work directly with local farmers and producers to ensure our
+              ingredients are always fresh and sustainably sourced. Our chefs
+              undergo continuous training in international culinary techniques,
+              bringing global flavors to your table while maintaining the soul
+              of traditional cooking.
+            </p>
+
+            <p class="section-text">
+              Beyond the kitchen, we believe in creating memorable experiences.
+              From our carefully curated wine list to our attentive service and
+              inviting atmosphere, every detail is designed to make your visit
+              special. Whether you're celebrating a milestone or enjoying a
+              casual meal, we're here to make it exceptional.
+            </p>
+
+            <div class="signature-container">
+              <img
+                src="./assets/images/signature.png"
+                alt="Chef's signature"
+                class="signature"
+                width="150"
+              />
+              <p class="signature-text">Executive Chef Michael Rodriguez</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="services" id="services">
+          <div class="service-card">
+            <p class="card-number">01</p>
+            <h3 class="card-heading">Prime City Center Location</h3>
+            <p class="card-text">
+              Nestled in the heart of the city, our restaurant offers convenient
+              access with ample parking and excellent public transport links.
+              Perfect for business lunches, romantic dinners, or family
+              celebrations.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <p class="card-number">02</p>
+            <h3 class="card-heading">Farm-to-Table Freshness</h3>
+            <p class="card-text">
+              We partner directly with local organic farms to bring you the
+              freshest seasonal produce. Our ingredients are delivered daily,
+              ensuring maximum flavor and nutritional value in every dish.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <p class="card-number">03</p>
+            <h3 class="card-heading">Express Delivery Service</h3>
+            <p class="card-text">
+              Enjoy restaurant-quality meals at home with our fast delivery
+              service. We guarantee delivery within 30 minutes for orders within
+              5km, with special thermal packaging to preserve temperature and
+              freshness.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <p class="card-number">04</p>
+            <h3 class="card-heading">Award-Winning Culinary Team</h3>
+            <p class="card-text">
+              Our chefs bring decades of combined experience from
+              Michelin-starred restaurants around the world. Regular training
+              ensures they stay at the forefront of culinary trends and
+              techniques.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <p class="card-number">05</p>
+            <h3 class="card-heading">Exceptional Dining Experience</h3>
+            <p class="card-text">
+              From personalized menu recommendations to thoughtful service, we
+              prioritize your comfort and satisfaction. Our staff undergoes
+              rigorous hospitality training to anticipate your every need.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <p class="card-number">06</p>
+            <h3 class="card-heading">Private Events & Catering</h3>
+            <p class="card-text">
+              Host your special events in our elegant private dining room or let
+              us bring the FoodHub experience to your venue. Custom menus and
+              professional service for any occasion.
+            </p>
+          </div>
+        </section>
+
+        <section class="product" id="menu">
+          <h2 class="section-title">Signature Dishes & Customer Favorites</h2>
+
+          <p class="section-text">
+            Each dish in our menu is crafted with precision and passion,
+            combining premium ingredients with innovative techniques to deliver
+            unforgettable flavors.
+          </p>
+
+          <div class="menu-filters">
+            <button class="filter-btn active" data-filter="all">
+              All Dishes
+            </button>
+            <button class="filter-btn" data-filter="vegetarian">
+              Vegetarian
+            </button>
+            <button class="filter-btn" data-filter="spicy">
+              Spicy Specials
+            </button>
+            <button class="filter-btn" data-filter="seafood">Seafood</button>
+            <button class="filter-btn" data-filter="chef">
+              Chef's Special
+            </button>
+          </div>
+
+          <div class="products-grid">
+            <a href="#">
+              <div class="product-card" data-category="vegetarian">
+                <div class="img-box">
+                  <img
+                    src="./assets/images/menu1.jpg"
+                    alt="Stracciatella cheese with herbs"
+                    class="product-img"
+                    width="200"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="product-content">
+                  <div class="wrapper">
+                    <h3 class="product-name">Artisan Stracciatella</h3>
+                    <p class="product-price">
+                      <span class="small">Rs</span>1,450
+                    </p>
+                  </div>
+                  <p class="product-text">
+                    Hand-stretched buffalo milk cheese with extra virgin olive
+                    oil, fresh basil, heirloom tomatoes, and sourdough crostini.
+                  </p>
+                  <div class="product-info">
+                    <div class="product-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-half"></ion-icon>
+                      <span class="rating-text">(128 reviews)</span>
+                    </div>
+                    <div class="product-tags">
+                      <span class="tag vegetarian">Vegetarian</span>
+                      <span class="tag gluten-free">Gluten-Free Option</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="product-card" data-category="chef">
+                <div class="img-box">
+                  <img
+                    src="./assets/images/menu2.jpg"
+                    alt="Fried goat cheese with honey"
+                    class="product-img"
+                    width="200"
+                    loading="lazy"
+                  />
+                  <div class="card-badge chef-special">
+                    <ion-icon name="star"></ion-icon>
+                    <p>Chef's Pick</p>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <div class="wrapper">
+                    <h3 class="product-name">Honey-Glazed Chevre</h3>
+                    <p class="product-price">
+                      <span class="small">Rs</span>1,850
+                    </p>
+                  </div>
+                  <p class="product-text">
+                    Crispy fried goat cheese drizzled with local wildflower
+                    honey, served with toasted walnuts and arugula salad.
+                  </p>
+                  <div class="product-info">
+                    <div class="product-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <span class="rating-text">(96 reviews)</span>
+                    </div>
+                    <div class="product-tags">
+                      <span class="tag vegetarian">Vegetarian</span>
+                      <span class="tag popular">Most Ordered</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="product-card" data-category="seafood">
+                <div class="img-box">
+                  <img
+                    src="./assets/images/menu3.jpg"
+                    alt="Salmon gravlax with dill"
+                    class="product-img"
+                    width="200"
+                    loading="lazy"
+                  />
+                  <div class="card-badge green">
+                    <ion-icon name="leaf"></ion-icon>
+                    <p>Healthy Choice</p>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <div class="wrapper">
+                    <h3 class="product-name">Nordic Salmon Gravlax</h3>
+                    <p class="product-price">
+                      <span class="small">Rs</span>2,150
+                    </p>
+                  </div>
+                  <p class="product-text">
+                    48-hour cured Atlantic salmon with fresh dill, mustard
+                    sauce, pickled cucumber, and rye bread crisps.
+                  </p>
+                  <div class="product-info">
+                    <div class="product-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-half"></ion-icon>
+                      <span class="rating-text">(142 reviews)</span>
+                    </div>
+                    <div class="product-tags">
+                      <span class="tag seafood">Sustainable Seafood</span>
+                      <span class="tag healthy">High Protein</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="product-card" data-category="spicy seafood">
+                <div class="img-box">
+                  <img
+                    src="./assets/images/menu4.jpg"
+                    alt="Crispy fish with spices"
+                    class="product-img"
+                    width="200"
+                    loading="lazy"
+                  />
+                  <div class="card-badge red">
+                    <ion-icon name="flame"></ion-icon>
+                    <p>Spicy</p>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <div class="wrapper">
+                    <h3 class="product-name">Sichuan Crispy Sea Bass</h3>
+                    <p class="product-price">
+                      <span class="small">Rs</span>1,950
+                    </p>
+                  </div>
+                  <p class="product-text">
+                    Line-caught sea bass with Szechuan peppercorns, chili oil,
+                    ginger, scallions, and jasmine rice.
+                  </p>
+                  <div class="product-info">
+                    <div class="product-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <span class="rating-text">(87 reviews)</span>
+                    </div>
+                    <div class="product-tags">
+                      <span class="tag spicy">Spicy</span>
+                      <span class="tag seafood">Fresh Catch</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="product-card" data-category="seafood">
+                <div class="img-box">
+                  <img
+                    src="./assets/images/menu5.jpg"
+                    alt="Sea bream carpaccio"
+                    class="product-img"
+                    width="200"
+                    loading="lazy"
+                  />
+                  <div class="card-badge new">
+                    <ion-icon name="sparkles"></ion-icon>
+                    <p>New</p>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <div class="wrapper">
+                    <h3 class="product-name">Mediterranean Bream Carpaccio</h3>
+                    <p class="product-price">
+                      <span class="small">Rs</span>2,350
+                    </p>
+                  </div>
+                  <p class="product-text">
+                    Paper-thin sea bream with lemon-caper dressing, micro herbs,
+                    and edible flowers.
+                  </p>
+                  <div class="product-info">
+                    <div class="product-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <span class="rating-text">(43 reviews)</span>
+                    </div>
+                    <div class="product-tags">
+                      <span class="tag seafood">Raw Special</span>
+                      <span class="tag gluten-free">Gluten-Free</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="product-card" data-category="vegetarian">
+                <div class="img-box">
+                  <img
+                    src="./assets/images/menu2.jpg"
+                    alt="Vegetarian pasta dish"
+                    class="product-img"
+                    width="200"
+                    loading="lazy"
+                  />
+                  <div class="card-badge green">
+                    <ion-icon name="leaf"></ion-icon>
+                    <p>Vegan</p>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <div class="wrapper">
+                    <h3 class="product-name">Truffle Mushroom Risotto</h3>
+                    <p class="product-price">
+                      <span class="small">Rs</span>1,650
+                    </p>
+                  </div>
+                  <p class="product-text">
+                    Creamy arborio rice with wild mushrooms, black truffle,
+                    white wine, and Parmigiano-Reggiano.
+                  </p>
+                  <div class="product-info">
+                    <div class="product-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <span class="rating-text">(211 reviews)</span>
+                    </div>
+                    <div class="product-tags">
+                      <span class="tag vegetarian">Vegetarian</span>
+                      <span class="tag popular">Customer Favorite</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="menu-cta">
+            <a href="menu.html">
+              <button class="btn btn-primary btn-icon">
+                <img src="./assets/images/menu.svg" alt="menu icon" />
+                View Complete Menu
+              </button>
+            </a>
+            <p class="menu-note">
+              All prices include taxes. Please inform us of any allergies or
+              dietary restrictions.
+            </p>
+          </div>
+        </section>
+
+        <section class="testimonials" id="testimonials">
+          <h2 class="section-title">Voices from Our Valued Guests</h2>
+
+          <p class="section-text">
+            Don't just take our word for it—here's what our community of food
+            lovers has to say about their experiences at FoodHub.
+          </p>
+
+          <div class="testimonials-grid">
+            <div class="testimonials-card">
+              <h4 class="card-title">A Culinary Masterpiece Every Time!</h4>
+              <div class="testimonials-rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="testimonials-text">
+                "We celebrated our anniversary at FoodHub, and it was absolutely
+                perfect. The attention to detail in every dish was
+                remarkable—from the presentation to the complex flavors. The
+                wine pairing suggestions were spot on, and the staff made us
+                feel like royalty. This isn't just a meal; it's a dining
+                experience you'll remember forever."
+              </p>
+              <div class="customer-info">
+                <div class="customer-img-box">
+                  <img
+                    src="./assets/images/testimonials1.jpg"
+                    alt="Emma Newman smiling"
+                    class="customer-img"
+                    width="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="customer-details">
+                  <h5 class="customer-name">Emma Newman</h5>
+                  <p class="customer-visit">Regular Guest · 12+ Visits</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonials-card">
+              <h4 class="card-title">My Go-To Spot for Business & Pleasure</h4>
+              <div class="testimonials-rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="testimonials-text">
+                "As someone who travels frequently for work, I've dined at
+                restaurants worldwide. FoodHub consistently delivers quality
+                that rivals top establishments. The consistency is
+                impressive—every visit is as excellent as the first. Their
+                private dining room is perfect for client meetings, and the team
+                always accommodates our specific needs with professionalism and
+                warmth."
+              </p>
+              <div class="customer-info">
+                <div class="customer-img-box">
+                  <img
+                    src="./assets/images/testimonials2.jpg"
+                    alt="Paul Trueman professional portrait"
+                    class="customer-img"
+                    width="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="customer-details">
+                  <h5 class="customer-name">Paul Trueman</h5>
+                  <p class="customer-visit">
+                    Corporate Client · Monthly Visitor
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonials-card">
+              <h4 class="card-title">
+                Finally, a Restaurant That Gets It Right
+              </h4>
+              <div class="testimonials-rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-half"></ion-icon>
+              </div>
+              <p class="testimonials-text">
+                "Being vegan used to mean limited options when dining out.
+                FoodHub changed that completely. Their plant-based menu is
+                creative, satisfying, and never feels like an afterthought. The
+                vegan tasting menu was a revelation! The staff is knowledgeable
+                about ingredients, which gives me confidence as someone with
+                food sensitivities. Thank you for making inclusive dining so
+                delicious!"
+              </p>
+              <div class="customer-info">
+                <div class="customer-img-box">
+                  <img
+                    src="./assets/images/testimonials1.jpg"
+                    alt="Sarah Chen smiling"
+                    class="customer-img"
+                    width="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="customer-details">
+                  <h5 class="customer-name">Sarah Chen</h5>
+                  <p class="customer-visit">Vegetarian Food Blogger</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-stats">
+            <div class="stat">
+              <h3 class="stat-number">4.9/5</h3>
+              <p class="stat-text">Average Rating</p>
+            </div>
+            <div class="stat">
+              <h3 class="stat-number">5000+</h3>
+              <p class="stat-text">Happy Customers</p>
+            </div>
+            <div class="stat">
+              <h3 class="stat-number">97%</h3>
+              <p class="stat-text">Return Guests</p>
+            </div>
+            <div class="stat">
+              <h3 class="stat-number">50+</h3>
+              <p class="stat-text">5-Star Reviews</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="newsletter">
+          <div class="newsletter-content">
+            <h2 class="section-title">Join Our Foodie Family</h2>
+            <p class="section-text">
+              Subscribe to receive exclusive offers, seasonal menu updates, and
+              culinary inspiration delivered to your inbox.
+            </p>
+            <form class="newsletter-form">
+              <input
+                type="email"
+                placeholder="Your email address"
+                required
+                class="newsletter-input"
+              />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            <p class="newsletter-note">
+              We respect your privacy. Unsubscribe anytime.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-wrapper">
+          <div class="footer-brand">
+            <a href="#home">
+              <img
+                src="./assets/images/logo-footer.svg"
+                alt="FoodHub Logo"
+                class="footer-logo"
+                width="130"
+              />
+            </a>
+            <p class="footer-tagline">Delicious food since 2015.</p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4 class="footer-heading">Quick Links</h4>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4 class="footer-heading">Contact</h4>
+              <ul>
+                <li><a href="tel:+923001234567">+92 300 1234567</a></li>
+                <li><a href="mailto:info@foodhub.com">info@foodhub.com</a></li>
+                <li>Main Street, Karachi</li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4 class="footer-heading">Hours</h4>
+              <ul>
+                <li>Mon-Sun: 12PM - 12AM</li>
+                <li>Friday Prayer Break: 1PM-2PM</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="social-link">
+            <a href="#" aria-label="Instagram">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="#" aria-label="Foodpanda">
+              <ion-icon name="fast-food"></ion-icon>
+            </a>
+          </div>
+
+          <p class="copyright">
+            © <span id="year"></span> FoodHub. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- custom js link -->
+    <script src="./assets/js/foodhub.js"></script>
+
+    <!-- ionicon link -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- additional styles for new features -->
+  </body>
+</html>
