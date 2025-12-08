@@ -5,279 +5,326 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Full Menu - FoodHub</title>
     
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+
     <link rel="stylesheet" href="assets/css/foodhub.css">
-    <link rel="stylesheet" href="assets/css/media_query.css">
+    <link rel="icon" href="./assets/images/logo.svg" type="image/svg+xml">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
 </head>
-<body>
-    <div class="container">
+<body class="font-rubik">
+    <div class="container mx-auto">
       <header>
-        <nav class="navbar">
-          <div class="navbar-wrapper">
-            <a href="#">
+        <nav class="fixed top-0 left-1/2 transform -translate-x-1/2 w-full py-5 px-8 bg-white/95 border-b border-black/5 shadow-sm z-50">
+          <div class="navbar-wrapper flex justify-between items-center max-w-7xl mx-auto">
+            <a href="index.html">
               <img src="./assets/images/logo.svg" alt="logo" width="130" />
             </a>
 
-            <ul class="navbar-nav">
-              <li><a href="index.html" class="nav-link">Home</a></li>
-              <li><a href="index.html#about" class="nav-link">About</a></li>
-              <li><a href="index.html#services" class="nav-link">Services</a></li>
-              <li><a href="index.html#menu" class="nav-link">Our Menu</a></li>
-              <li><a href="index.html#testimonials" class="nav-link">Testimonials</a></li>
+            <ul class="navbar-nav absolute top-[91px] left-0 w-full h-[calc(100vh-91px)] flex flex-col items-center gap-8 p-9 bg-white/90 backdrop-blur-lg translate-y-12 opacity-0 invisible pointer-events-none transition-all duration-300 ease-in-out md:static md:flex-row md:bg-transparent md:backdrop-blur-none md:translate-y-0 md:opacity-100 md:visible md:pointer-events-auto md:h-auto md:w-auto md:p-0">
+              <li><a href="index.html" class="nav-link text-space-cadet text-sm hover:text-saffron transition-colors duration-250">Home</a></li>
+              <li><a href="index.html#about" class="nav-link text-space-cadet text-sm hover:text-saffron transition-colors duration-250">About</a></li>
+              <li><a href="index.html#services" class="nav-link text-space-cadet text-sm hover:text-saffron transition-colors duration-250">Services</a></li>
+              <li><a href="index.html#menu" class="nav-link text-space-cadet text-sm hover:text-saffron transition-colors duration-250">Our Menu</a></li>
+              <li><a href="index.html#testimonials" class="nav-link text-space-cadet text-sm hover:text-saffron transition-colors duration-250">Testimonials</a></li>
             </ul>
 
-            <div class="navbar-btn-group">
-              <button class="shopping-cart-btn">
+            <div class="navbar-btn-group flex items-center gap-6">
+              <button class="shopping-cart-btn relative bg-cultured w-12 h-12 rounded-full flex justify-center items-center border-2 border-white">
                 <img src="./assets/images/cart.svg" alt="shopping cart icon" width="18" />
-                <span class="count">5</span>
+                <span class="count absolute -top-0.5 -right-0.5 bg-saffron text-space-cadet text-xs font-medium h-5 min-w-5 flex items-center px-1.5 rounded-full">5</span>
               </button>
 
-              <button class="menu-toggle-btn">
-                <span class="line one"></span>
-                <span class="line two"></span>
-                <span class="line three"></span>
+              <button class="menu-toggle-btn flex flex-col w-5 gap-1 md:hidden">
+                <span class="line one bg-space-cadet w-5 h-0.5 rounded transition-all duration-250"></span>
+                <span class="line two bg-space-cadet w-5 h-0.5 rounded transition-all duration-250"></span>
+                <span class="line three bg-space-cadet w-5 h-0.5 rounded transition-all duration-250"></span>
               </button>
             </div>
           </div>
         </nav>
 
-        <div class="cart-box">
-          <ul class="cart-box-ul">
-            <h4 class="cart-h4">Your order.</h4>
+        <div class="cart-box fixed bottom-0 right-0 max-w-md w-full h-[calc(100vh-91px)] bg-white/90 backdrop-blur-lg shadow-xl translate-x-full invisible z-50">
+          <ul class="cart-box-ul h-full p-8 pb-32 overflow-y-auto">
+            <h4 class="cart-h4 text-space-cadet text-xl font-semibold mb-8">Your order.</h4>
 
-            <li>
-              <a href="#" class="cart-item">
-                <div class="img-box">
-                  <img src="./assets/images/menu1.jpg" alt="product image" class="product-img" width="50" height="50" loading="lazy" />
+            <li class="mb-6">
+              <a href="#" class="cart-item flex items-center bg-cultured hover:bg-gray-100 transition-colors">
+                <div class="img-box w-16 h-16 mr-4 overflow-hidden">
+                  <img src="./assets/images/menu1.jpg" alt="product image" class="product-img w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
                 </div>
-                <h5 class="product-name">Saumon gravlax</h5>
-                <p class="product-price"><span class="small">Rs</span> 1,450</p>
+                <h5 class="product-name text-space-cadet font-medium text-sm flex-grow">Saumon gravlax</h5>
+                <p class="product-price bg-saffron text-space-cadet font-medium w-20 h-16 flex items-center justify-center text-lg">
+                  <span class="text-xs mt-1">Rs</span> 1,450
+                </p>
               </a>
             </li>
 
-            <li>
-              <a href="#" class="cart-item">
-                <div class="img-box">
-                  <img src="./assets/images/menu2.jpg" alt="product image" class="product-img" width="50" height="50" loading="lazy" />
+            <li class="mb-6">
+              <a href="#" class="cart-item flex items-center bg-cultured hover:bg-gray-100 transition-colors">
+                <div class="img-box w-16 h-16 mr-4 overflow-hidden">
+                  <img src="./assets/images/menu2.jpg" alt="product image" class="product-img w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
                 </div>
-                <h5 class="product-name">Chevre fried with honey</h5>
-                <p class="product-price"><span class="small">Rs</span> 1,980</p>
+                <h5 class="product-name text-space-cadet font-medium text-sm flex-grow">Chevre fried with honey</h5>
+                <p class="product-price bg-saffron text-space-cadet font-medium w-20 h-16 flex items-center justify-center text-lg">
+                  <span class="text-xs mt-1">Rs</span> 1,980
+                </p>
               </a>
             </li>
 
-            <li>
-              <a href="#" class="cart-item">
-                <div class="img-box">
-                  <img src="./assets/images/menu3.jpg" alt="product image" class="product-img" width="50" height="50" loading="lazy" />
+            <li class="mb-6">
+              <a href="#" class="cart-item flex items-center bg-cultured hover:bg-gray-100 transition-colors">
+                <div class="img-box w-16 h-16 mr-4 overflow-hidden">
+                  <img src="./assets/images/menu3.jpg" alt="product image" class="product-img w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
                 </div>
-                <h5 class="product-name">Crispy fish</h5>
-                <p class="product-price"><span class="small">Rs</span> 780</p>
+                <h5 class="product-name text-space-cadet font-medium text-sm flex-grow">Crispy fish</h5>
+                <p class="product-price bg-saffron text-space-cadet font-medium w-20 h-16 flex items-center justify-center text-lg">
+                  <span class="text-xs mt-1">Rs</span> 780
+                </p>
               </a>
             </li>
 
-            <li>
-              <a href="#" class="cart-item">
-                <div class="img-box">
-                  <img src="./assets/images/menu4.jpg" alt="product image" class="product-img" width="50" height="50" loading="lazy" />
+            <li class="mb-6">
+              <a href="#" class="cart-item flex items-center bg-cultured hover:bg-gray-100 transition-colors">
+                <div class="img-box w-16 h-16 mr-4 overflow-hidden">
+                  <img src="./assets/images/menu4.jpg" alt="product image" class="product-img w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
                 </div>
-                <h5 class="product-name">Stracciatella</h5>
-                <p class="product-price"><span class="small">Rs</span> 1,650</p>
+                <h5 class="product-name text-space-cadet font-medium text-sm flex-grow">Stracciatella</h5>
+                <p class="product-price bg-saffron text-space-cadet font-medium w-20 h-16 flex items-center justify-center text-lg">
+                  <span class="text-xs mt-1">Rs</span> 1,650
+                </p>
               </a>
             </li>
 
-            <li>
-              <a href="#" class="cart-item">
-                <div class="img-box">
-                  <img src="./assets/images/menu5.jpg" alt="product image" class="product-img" width="50" height="50" loading="lazy" />
+            <li class="mb-6">
+              <a href="#" class="cart-item flex items-center bg-cultured hover:bg-gray-100 transition-colors">
+                <div class="img-box w-16 h-16 mr-4 overflow-hidden">
+                  <img src="./assets/images/menu5.jpg" alt="product image" class="product-img w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
                 </div>
-                <h5 class="product-name">Sea bream carpaccio</h5>
-                <p class="product-price"><span class="small">Rs</span> 2,350</p>
+                <h5 class="product-name text-space-cadet font-medium text-sm flex-grow">Sea bream carpaccio</h5>
+                <p class="product-price bg-saffron text-space-cadet font-medium w-20 h-16 flex items-center justify-center text-lg">
+                  <span class="text-xs mt-1">Rs</span> 2,350
+                </p>
               </a>
             </li>
           </ul>
 
-          <div class="cart-btn-group">
-            <button class="btn btn-secondary">View order</button>
-            <button class="btn btn-primary">Checkout</button>
+          <div class="cart-btn-group bg-white fixed bottom-0 left-0 right-0 flex justify-between items-center gap-5 p-5 border-t border-gray-200">
+            <button class="btn btn-secondary px-6 py-3 bg-cultured text-space-cadet font-medium rounded-lg hover:bg-gray-200 transition-colors">View order</button>
+            <button class="btn btn-primary px-6 py-3 bg-saffron text-space-cadet font-medium rounded-lg hover:opacity-90 transition-colors">Checkout</button>
           </div>
         </div>
       </header>
 
-      <main class="menu-page">
+      <main class="menu-page pt-32 pb-20 px-4 md:px-8 lg:px-16">
         <section class="product" id="menu">
-          <div class="menu-header">
-            <h2 class="section-title">Chef's Signature Collection</h2>
-            <p class="section-text">Experience culinary artistry with our most requested dishes, crafted from locally sourced ingredients and traditional techniques.</p>
+          <div class="menu-header text-center mb-12">
+            <h2 class="section-title text-3xl md:text-4xl lg:text-5xl font-bold text-space-cadet mb-6">Chef's Signature Collection</h2>
+            <p class="section-text text-rhythm text-lg max-w-2xl mx-auto">Experience culinary artistry with our most requested dishes, crafted from locally sourced ingredients and traditional techniques.</p>
           </div>
 
-          <div class="products-grid menu-products-grid">
-            <!-- Dish 1 -->
-            <a href="#">
-              <div class="product-card">
-                <div class="img-box">
-                  <img src="./assets/images/menu1.jpg" alt="Black Truffle Risotto" class="product-img" loading="lazy" />
-                  <div class="card-badge green">
-                    <ion-icon name="leaf"></ion-icon>
+          <div class="products-grid menu-products-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            
+            <!-- Card 1 -->
+            <a href="#" class="group">
+              <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                <div class="relative overflow-hidden">
+                  <img src="./assets/images/menu1.jpg" alt="Black Truffle Risotto" 
+                       class="product-img w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div class="card-badge absolute top-4 left-4 bg-pistachio text-space-cadet px-3 py-1.5 rounded-full text-xs font-medium flex items-center gap-1">
+                    <ion-icon name="leaf" class="text-sm"></ion-icon>
                     <p>Vegetarian</p>
                   </div>
                 </div>
-                <div class="product-content">
-                  <div class="wrapper">
-                    <h3 class="product-name">Black Truffle Risotto</h3>
-                    <p class="product-price"><span class="small">Rs</span>1850</p>
+                <div class="product-content p-6">
+                  <div class="wrapper flex justify-between items-start mb-4">
+                    <h3 class="product-name text-lg font-bold text-space-cadet">Black Truffle Risotto</h3>
+                    <p class="product-price bg-saffron text-space-cadet px-3 py-1.5 rounded-lg font-bold text-lg">
+                      <span class="text-xs align-super">Rs</span>1850
+                    </p>
                   </div>
-                  <p class="product-text">Arborio rice slowly cooked in vegetable broth with fresh black truffle, Parmigiano-Reggiano, wild mushrooms, and white wine reduction.</p>
+                  <p class="product-text text-rhythm text-sm mb-4 leading-relaxed">
+                    Arborio rice slowly cooked in vegetable broth with fresh black truffle, Parmigiano-Reggiano, wild mushrooms, and white wine reduction.
+                  </p>
                   <div class="product-info">
-                    <div class="product-rating">
+                    <div class="product-rating flex items-center gap-1 text-amber-500">
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star-half"></ion-icon>
-                      <span class="rating-text">4.7</span>
+                      <span class="rating-text text-xs text-rhythm ml-2">4.7</span>
                     </div>
                   </div>
                 </div>
               </div>
             </a>
 
-            <!-- Dish 2 -->
-            <a href="#">
-              <div class="product-card">
-                <div class="img-box">
-                  <img src="./assets/images/menu2.jpg" alt="Royal Butter Chicken" class="product-img" loading="lazy" />
-                  <div class="card-badge red">
-                    <ion-icon name="flame"></ion-icon>
+            <!-- Card 2 -->
+            <a href="#" class="group">
+              <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                <div class="relative overflow-hidden">
+                  <img src="./assets/images/menu2.jpg" alt="Royal Butter Chicken" 
+                       class="product-img w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div class="card-badge absolute top-4 left-4 bg-red-orange-crayola text-space-cadet px-3 py-1.5 rounded-full text-xs font-medium flex items-center gap-1">
+                    <ion-icon name="flame" class="text-sm"></ion-icon>
                     <p>Spicy</p>
                   </div>
                 </div>
-                <div class="product-content">
-                  <div class="wrapper">
-                    <h3 class="product-name">Royal Butter Chicken</h3>
-                    <p class="product-price"><span class="small">Rs</span>1650</p>
+                <div class="product-content p-6">
+                  <div class="wrapper flex justify-between items-start mb-4">
+                    <h3 class="product-name text-lg font-bold text-space-cadet">Royal Butter Chicken</h3>
+                    <p class="product-price bg-saffron text-space-cadet px-3 py-1.5 rounded-lg font-bold text-lg">
+                      <span class="text-xs align-super">Rs</span>1650
+                    </p>
                   </div>
-                  <p class="product-text">Tandoori chicken simmered in rich tomato gravy with cashew paste, fenugreek, cream, and house-blended spices. Served with garlic naan.</p>
+                  <p class="product-text text-rhythm text-sm mb-4 leading-relaxed">
+                    Tandoori chicken simmered in rich tomato gravy with cashew paste, fenugreek, cream, and house-blended spices. Served with garlic naan.
+                  </p>
                   <div class="product-info">
-                    <div class="product-rating">
+                    <div class="product-rating flex items-center gap-1 text-amber-500">
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
-                      <span class="rating-text">5.0</span>
+                      <span class="rating-text text-xs text-rhythm ml-2">5.0</span>
                     </div>
                   </div>
                 </div>
               </div>
             </a>
 
-            <!-- Dish 3 -->
-            <a href="#">
-              <div class="product-card">
-                <div class="img-box">
-                  <img src="./assets/images/menu3.jpg" alt="Salmon Tataki" class="product-img" loading="lazy" />
+            <!-- Card 3 -->
+            <a href="#" class="group">
+              <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                <div class="relative overflow-hidden">
+                  <img src="./assets/images/menu3.jpg" alt="Salmon Tataki" 
+                       class="product-img w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
-                <div class="product-content">
-                  <div class="wrapper">
-                    <h3 class="product-name">Salmon Tataki</h3>
-                    <p class="product-price"><span class="small">Rs</span>2250</p>
+                <div class="product-content p-6">
+                  <div class="wrapper flex justify-between items-start mb-4">
+                    <h3 class="product-name text-lg font-bold text-space-cadet">Salmon Tataki</h3>
+                    <p class="product-price bg-saffron text-space-cadet px-3 py-1.5 rounded-lg font-bold text-lg">
+                      <span class="text-xs align-super">Rs</span>2250
+                    </p>
                   </div>
-                  <p class="product-text">Lightly seared Atlantic salmon with ponzu sauce, avocado mousse, crispy shallots, sesame seeds, and microgreens. Gluten-free option available.</p>
+                  <p class="product-text text-rhythm text-sm mb-4 leading-relaxed">
+                    Lightly seared Atlantic salmon with ponzu sauce, avocado mousse, crispy shallots, sesame seeds, and microgreens. Gluten-free option available.
+                  </p>
                   <div class="product-info">
-                    <div class="product-rating">
+                    <div class="product-rating flex items-center gap-1 text-amber-500">
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star-outline"></ion-icon>
-                      <span class="rating-text">4.2</span>
+                      <span class="rating-text text-xs text-rhythm ml-2">4.2</span>
                     </div>
                   </div>
                 </div>
               </div>
             </a>
 
-            <!-- Dish 4 -->
-            <a href="#">
-              <div class="product-card">
-                <div class="img-box">
-                  <img src="./assets/images/menu4.jpg" alt="Wild Mushroom Ravioli" class="product-img" loading="lazy" />
-                  <div class="card-badge green">
-                    <ion-icon name="leaf"></ion-icon>
+            <!-- Card 4 -->
+            <a href="#" class="group">
+              <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                <div class="relative overflow-hidden">
+                  <img src="./assets/images/menu4.jpg" alt="Wild Mushroom Ravioli" 
+                       class="product-img w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div class="card-badge absolute top-4 left-4 bg-pistachio text-space-cadet px-3 py-1.5 rounded-full text-xs font-medium flex items-center gap-1">
+                    <ion-icon name="leaf" class="text-sm"></ion-icon>
                     <p>Vegan</p>
                   </div>
                 </div>
-                <div class="product-content">
-                  <div class="wrapper">
-                    <h3 class="product-name">Wild Mushroom Ravioli</h3>
-                    <p class="product-price"><span class="small">Rs</span>1450</p>
+                <div class="product-content p-6">
+                  <div class="wrapper flex justify-between items-start mb-4">
+                    <h3 class="product-name text-lg font-bold text-space-cadet">Wild Mushroom Ravioli</h3>
+                    <p class="product-price bg-saffron text-space-cadet px-3 py-1.5 rounded-lg font-bold text-lg">
+                      <span class="text-xs align-super">Rs</span>1450
+                    </p>
                   </div>
-                  <p class="product-text">Handmade pasta filled with porcini, shiitake, and oyster mushrooms in sage brown butter, topped with truffle oil and walnut crumble.</p>
+                  <p class="product-text text-rhythm text-sm mb-4 leading-relaxed">
+                    Handmade pasta filled with porcini, shiitake, and oyster mushrooms in sage brown butter, topped with truffle oil and walnut crumble.
+                  </p>
                   <div class="product-info">
-                    <div class="product-rating">
+                    <div class="product-rating flex items-center gap-1 text-amber-500">
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
-                      <span class="rating-text">4.9</span>
+                      <span class="rating-text text-xs text-rhythm ml-2">4.9</span>
                     </div>
                   </div>
                 </div>
               </div>
             </a>
 
-            <!-- Dish 5 -->
-            <a href="#">
-              <div class="product-card">
-                <div class="img-box">
-                  <img src="./assets/images/menu5.jpg" alt="Angus Ribeye Steak" class="product-img" loading="lazy" />
+            <!-- Card 5 -->
+            <a href="#" class="group">
+              <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                <div class="relative overflow-hidden">
+                  <img src="./assets/images/menu5.jpg" alt="Angus Ribeye Steak" 
+                       class="product-img w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
-                <div class="product-content">
-                  <div class="wrapper">
-                    <h3 class="product-name">Angus Ribeye Steak</h3>
-                    <p class="product-price"><span class="small">Rs</span>2950</p>
+                <div class="product-content p-6">
+                  <div class="wrapper flex justify-between items-start mb-4">
+                    <h3 class="product-name text-lg font-bold text-space-cadet">Angus Ribeye Steak</h3>
+                    <p class="product-price bg-saffron text-space-cadet px-3 py-1.5 rounded-lg font-bold text-lg">
+                      <span class="text-xs align-super">Rs</span>2950
+                    </p>
                   </div>
-                  <p class="product-text">12oz grass-fed Angus ribeye with red wine jus, roasted garlic mashed potatoes, grilled asparagus, and caramelized shallots.</p>
+                  <p class="product-text text-rhythm text-sm mb-4 leading-relaxed">
+                    12oz grass-fed Angus ribeye with red wine jus, roasted garlic mashed potatoes, grilled asparagus, and caramelized shallots.
+                  </p>
                   <div class="product-info">
-                    <div class="product-rating">
+                    <div class="product-rating flex items-center gap-1 text-amber-500">
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star-half"></ion-icon>
-                      <span class="rating-text">4.6</span>
+                      <span class="rating-text text-xs text-rhythm ml-2">4.6</span>
                     </div>
                   </div>
                 </div>
               </div>
             </a>
 
-            <!-- Dish 6 -->
-            <a href="#">
-              <div class="product-card">
-                <div class="img-box">
-                  <img src="./assets/images/menu1.jpg" alt="Mediterranean Bowl" class="product-img" loading="lazy" />
-                  <div class="card-badge green">
-                    <ion-icon name="leaf"></ion-icon>
+            <!-- Card 6 -->
+            <a href="#" class="group">
+              <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                <div class="relative overflow-hidden">
+                  <img src="./assets/images/menu1.jpg" alt="Mediterranean Bowl" 
+                       class="product-img w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div class="card-badge absolute top-4 left-4 bg-pistachio text-space-cadet px-3 py-1.5 rounded-full text-xs font-medium flex items-center gap-1">
+                    <ion-icon name="leaf" class="text-sm"></ion-icon>
                     <p>Healthy</p>
                   </div>
                 </div>
-                <div class="product-content">
-                  <div class="wrapper">
-                    <h3 class="product-name">Mediterranean Bowl</h3>
-                    <p class="product-price"><span class="small">Rs</span>1250</p>
+                <div class="product-content p-6">
+                  <div class="wrapper flex justify-between items-start mb-4">
+                    <h3 class="product-name text-lg font-bold text-space-cadet">Mediterranean Bowl</h3>
+                    <p class="product-price bg-saffron text-space-cadet px-3 py-1.5 rounded-lg font-bold text-lg">
+                      <span class="text-xs align-super">Rs</span>1250
+                    </p>
                   </div>
-                  <p class="product-text">Quinoa base with grilled halloumi, cherry tomatoes, kalamata olives, cucumber, red onion, feta, and lemon-herb dressing.</p>
+                  <p class="product-text text-rhythm text-sm mb-4 leading-relaxed">
+                    Quinoa base with grilled halloumi, cherry tomatoes, kalamata olives, cucumber, red onion, feta, and lemon-herb dressing.
+                  </p>
                   <div class="product-info">
-                    <div class="product-rating">
+                    <div class="product-rating flex items-center gap-1 text-amber-500">
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star"></ion-icon>
                       <ion-icon name="star-outline"></ion-icon>
-                      <span class="rating-text">4.3</span>
+                      <span class="rating-text text-xs text-rhythm ml-2">4.3</span>
                     </div>
                   </div>
                 </div>
@@ -285,71 +332,72 @@
             </a>
           </div>
 
-          <p class="menu-note">
-            <ion-icon name="time-outline"></ion-icon>
+          <p class="menu-note text-center text-rhythm text-sm flex items-center justify-center gap-2">
+            <ion-icon name="time-outline" class="text-saffron"></ion-icon>
             Average preparation time: 20-30 minutes
           </p>
         </section>
       </main>
 
-      <footer>
-        <div class="footer-wrapper">
-          <div class="footer-brand">
-            <a href="#home">
-              <img
-                src="./assets/images/logo-footer.svg"
-                alt="FoodHub Logo"
-                class="footer-logo"
-                width="130"
-              />
-            </a>
-            <p class="footer-tagline">Delicious food since 2015.</p>
-          </div>
+      <footer class="bg-space-cadet text-white py-12 px-4 md:px-8 lg:px-16">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+            <div class="footer-brand">
+              <a href="index.html">
+                <img
+                  src="./assets/images/logo-footer.svg"
+                  alt="FoodHub Logo"
+                  class="footer-logo w-32 mb-4"
+                />
+              </a>
+              <p class="footer-tagline text-gray-300">Delicious food since 2007.</p>
+            </div>
 
-          <div class="footer-links">
             <div class="footer-column">
-              <h4 class="footer-heading">Quick Links</h4>
-              <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#testimonials">Reviews</a></li>
+              <h4 class="footer-heading text-saffron font-bold mb-4">Quick Links</h4>
+              <ul class="space-y-2">
+                <li><a href="index.html" class="text-gray-300 hover:text-saffron transition-colors">Home</a></li>
+                <li><a href="#menu" class="text-gray-300 hover:text-saffron transition-colors">Menu</a></li>
+                <li><a href="index.html#about" class="text-gray-300 hover:text-saffron transition-colors">About</a></li>
+                <li><a href="index.html#testimonials" class="text-gray-300 hover:text-saffron transition-colors">Reviews</a></li>
               </ul>
             </div>
 
             <div class="footer-column">
-              <h4 class="footer-heading">Contact</h4>
-              <ul>
-                <li><a href="tel:+923001234567">+92 300 1234567</a></li>
-                <li><a href="mailto:info@foodhub.com">info@foodhub.com</a></li>
-                <li>Main Street, Karachi</li>
+              <h4 class="footer-heading text-saffron font-bold mb-4">Contact</h4>
+              <ul class="space-y-2">
+                <li><a href="tel:+923001234567" class="text-gray-300 hover:text-saffron transition-colors">+92 300 1234567</a></li>
+                <li><a href="mailto:info@foodhub.com" class="text-gray-300 hover:text-saffron transition-colors">info@foodhub.com</a></li>
+                <li class="text-gray-300">Main Street, Karachi</li>
               </ul>
             </div>
 
             <div class="footer-column">
-              <h4 class="footer-heading">Hours</h4>
-              <ul>
-                <li>Mon-Sun: 12PM - 12AM</li>
-                <li>Friday Prayer Break: 1PM-2PM</li>
+              <h4 class="footer-heading text-saffron font-bold mb-4">Hours</h4>
+              <ul class="space-y-2">
+                <li class="text-gray-300">Mon-Sun: 12PM - 12AM</li>
+                <li class="text-gray-300">Friday Prayer Break: 1PM-2PM</li>
               </ul>
             </div>
           </div>
 
-          <div class="social-link">
-            <a href="#" aria-label="Instagram">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-            <a href="#" aria-label="Facebook">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-            <a href="#" aria-label="Foodpanda">
-              <ion-icon name="fast-food"></ion-icon>
-            </a>
-          </div>
+          <div class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="social-link flex gap-4">
+              <a href="#" aria-label="Instagram" class="text-gray-300 hover:text-saffron transition-colors">
+                <ion-icon name="logo-instagram" class="text-xl"></ion-icon>
+              </a>
+              <a href="#" aria-label="Facebook" class="text-gray-300 hover:text-saffron transition-colors">
+                <ion-icon name="logo-facebook" class="text-xl"></ion-icon>
+              </a>
+              <a href="#" aria-label="Foodpanda" class="text-gray-300 hover:text-saffron transition-colors">
+                <ion-icon name="fast-food" class="text-xl"></ion-icon>
+              </a>
+            </div>
 
-          <p class="copyright">
-            © <span id="year"></span> FoodHub. All rights reserved.
-          </p>
+            <p class="copyright text-gray-400 text-sm">
+              © <span id="year"></span> FoodHub. All rights reserved.
+            </p>
+          </div>
         </div>
       </footer>
     </div>
