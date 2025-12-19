@@ -14,7 +14,6 @@
   color: hsl(249, 37%, 19%) !important;
 }
 
-/* Tag colors that aren't in Tailwind config */
 .tag.vegetarian {
   background-color: hsl(88, 50%, 60%);
 }
@@ -90,7 +89,6 @@
   animation-delay: 2s;
 }
 
-/* Custom components that need JS interaction */
 .cart-box {
   transform: translateX(100%);
   transition: transform 0.5s ease-in-out;
@@ -117,7 +115,6 @@
   pointer-events: all;
 }
 
-/* Hamburger menu animation */
 .menu-toggle-btn.active .one {
   transform: translateY(7px) rotate(-45deg);
 }
@@ -181,4 +178,11 @@
   0%, 100% { transform: translateY(0); }
   20% { transform: translateY(-3px); }
   50% { transform: translateY(-8px); }
+}
+
+@media (min-width: 1024px) {
+  .dialog-1,
+  .dialog-2 {
+    width: 260px;
+  }
 }
